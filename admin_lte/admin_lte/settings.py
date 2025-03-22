@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'admin_pannel',
+    'another_app',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = '/admin/'  # Redirect to login instead of '/accounts/login/'
+LOGIN_REDIRECT_URL = '/dashboard/'  # Redirect to dashboard instead of '/'
+# LOGOUT_REDIRECT_URL = '/my-logout/'  # Redirect to logout instead of '/'
